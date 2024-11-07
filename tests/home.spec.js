@@ -12,7 +12,7 @@ test("Verify Home page title", async ({ page }) => {
 test("Verify Other page title", async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.goto();
-    await homePage.verifyTitle("ASTONSYS | Leading Your Software To Success Through Quality");
+    await homePage.verifyTitle("ASTONSYS | Leading Your Software To Success Through Qualyity");
 });
 
 test("Verify Get in Touch form submission", async ({ page }) => {
