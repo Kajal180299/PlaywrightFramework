@@ -39,10 +39,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 6: Install Playwright browsers
+      # Step 6: Install Playwright globally (to ensure correct permissions)
+      - name: Install Playwright globally
+        run: npm install -g playwright
+
+      # Step 7: Check if Playwright was installed successfully
+      - name: Check Playwright installation
+        run: npx playwright --version
+
+      # Step 8: Install Playwright Browsers
       - name: Install Playwright Browsers
         run: npx playwright install
 
-      # Step 7: Run Playwright tests
+      # Step 9: Run Playwright tests
       - name: Run Playwright tests
         run: npx playwright test
